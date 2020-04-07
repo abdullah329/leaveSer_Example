@@ -1,0 +1,52 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <div class="card-title mb-3">طلبات الموافقة</div>
+    <div class="col-md-12">
+      <table class="table" width="80%">
+        <thead>
+        <tr>
+          <th>
+            رقم الموظف
+          </th>
+          <th>
+            اسم الموظف
+          </th>
+          <th>
+            تاريخ البداية
+          </th>
+          <th>
+            عدد الأيام
+          </th>
+          <th>
+            نوع الإجازة
+          </th>
+          <th>
+            الإجراء
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let app of transactions">
+          <td>{{app.userNid}}</td>
+          <td>""</td>
+          <td>{{app.startDateAg}}</td>
+          <td>{{app.duration}}</td>
+          <td>{{app.type}}</td>
+          <td>
+            <button (click)="approve(app)" *ngIf = "app.action ==='A'"
+                    class="btn btn-info"
+                    type="submit">موافقة
+            </button>
+            <button (click)="confirm(app)" *ngIf = "app.action ==='C'"
+                    class="btn btn-info"
+                    type="submit">اعتماد
+            </button>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>

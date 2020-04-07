@@ -1,0 +1,45 @@
+
+<div class="card mb-4">
+  <div class="card-body">
+    <div class="card-title mb-3">طلباتي</div>
+    <div class="col-md-12">
+      <ngx-datatable
+        [columnMode]="'force'"
+        [footerHeight]="50"
+        [headerHeight]="50"
+        [limit]="10"
+        [rowHeight]="60"
+        [rows]="applications"
+        [scrollbarV]="true"
+        class="material fullscreen"
+        style="height: calc(70vh - 270px); box-shadow: none">
+
+        <ngx-datatable-column  name="id">
+          <ng-template ngx-datatable-header-template>
+            رقم الإجازة
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="startDateAg">
+          <ng-template ngx-datatable-header-template>
+            تاريخ البداية
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="duration">
+          <ng-template ngx-datatable-header-template>
+            المدة
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="typeName">
+          <ng-template ngx-datatable-header-template>
+            النوع
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="status">
+          <ng-template ngx-datatable-header-template>
+            الحالة
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <div class="card-title mb-3">رصيد الإجازات</div>
+    <div class="col-md-12">
+      <ngx-datatable
+        [columnMode]="'force'"
+        [footerHeight]="50"
+        [headerHeight]="50"
+        [limit]="10"
+        [rowHeight]="60"
+        [rows]="balances"
+        [scrollbarV]="true"
+        class="material fullscreen"
+        style="height: calc(70vh - 270px); box-shadow: none">
+
+        <ngx-datatable-column  name="year">
+          <ng-template ngx-datatable-header-template>
+            السنة
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="startDate">
+          <ng-template ngx-datatable-header-template>
+            تاريخ البداية
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="endDate">
+          <ng-template ngx-datatable-header-template>
+            تاريخ الانتهاء
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="type">
+          <ng-template ngx-datatable-header-template>
+            النوع
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="balance">
+          <ng-template ngx-datatable-header-template>
+            الرصيد
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+<!--      <tr>-->
+      <!--        <th>-->
+      <!--          السنة-->
+      <!--        </th>-->
+      <!--        <th>-->
+      <!--          عدد الأيام المتبقية-->
+      <!--        </th>-->
+      <!--        <th>-->
+      <!--          المتفرقة منها-->
+      <!--        </th>-->
+      <!--      </tr>-->
+      <!--      <tr>-->
+      <!--        <td>-->
+      <!--          قبل ١٤٣٨-->
+      <!--        </td>-->
+      <!--        <td>-->
+      <!--          ٤٠-->
+      <!--        </td>-->
+      <!--        <td>-->
+      <!--          ٠-->
+      <!--        </td>-->
+      <!--      </tr>-->
+      <!--      <tr>-->
+      <!--        <td>-->
+      <!--          ١٤٣٩-->
+      <!--        </td>-->
+      <!--        <td>-->
+      <!--          ٣٠-->
+      <!--        </td>-->
+      <!--        <td>-->
+      <!--          ٠-->
+      <!--        </td>-->
+      <!--      </tr>-->
+      <!--      <tr>-->
+      <!--        <td>-->
+      <!--          ١٤٤٠-->
+      <!--        </td>-->
+      <!--        <td>-->
+      <!--          ٣٦-->
+      <!--        </td>-->
+      <!--        <td>-->
+      <!--          ٠-->
+      <!--        </td>-->
+      <!--      </tr>-->
+      <!--      <tr>-->
+      <!--        <td>-->
+      <!--          ١٤٤١-->
+      <!--        </td>-->
+      <!--        <td>-->
+      <!--          ٣٦-->
+      <!--        </td>-->
+      <!--        <td>-->
+      <!--          ٣-->
+      <!--        </td>-->
+      <!--      </tr>-->
+      <!--      </table>-->
+
+    </div>
+  </div>
+</div>

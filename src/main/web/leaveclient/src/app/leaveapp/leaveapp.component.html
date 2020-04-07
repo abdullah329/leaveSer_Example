@@ -1,0 +1,71 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <div class="card-title mb-3">نموذج طلب إجازة</div>
+    <form (ngSubmit)="onSubmit()" #appForm="ngForm">
+      <div class="row">
+        <div class="col-md-12  mb-3">
+          <div class="mb-5">
+            <div class="row row-xs">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="type">نوع الإجازة</label>
+                  <select [(ngModel)]="application.type"
+                          class="form-control"
+                          id="type"
+                          name="type">
+                    <option value="1">اعتيادية</option>
+                  </select>
+                </div>
+
+              </div>
+              <div class="col-md-12 mt-3 mt-md-0">
+                <div class="form-group">
+                  <label for="datePickerAG" style="text-align: left">تاريخ بدء الإجازة</label>
+                  <div class="input-group">
+                    <input id="datePickerAG"
+                           class="form-control"
+                           placeholder="yyyy-mm-dd" name="dp"
+                           [(ngModel)]="stDate"
+                           ngbDatepicker #dq="ngbDatepicker">
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" (click)="dq.toggle()" type="button">
+                        <i class="icon-regular i-Calendar-4"></i>
+                      </button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 mt-3 mt-md-0">
+                <div class="form-group ">
+                  <label for="duration">مدة الإجازة</label>
+                  <input [(ngModel)]="application.duration"
+                         type="text" pattern="[0-9]*" maxlength="3"
+                         name="lvNumber"
+                         id="duration"
+                         class="form-control"
+                         min="0" step="1"
+                         required
+                         #lvNumber="ngModel">
+                </div>
+
+              </div>
+
+              <div class="col-md-12 mt-3 mt-md-1">
+                <button type="submit"
+                        [disabled]="!appForm.form.valid"
+                        class="btn btn-info">ارسال
+                </button>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+</div>
+
